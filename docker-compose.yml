@@ -5,7 +5,7 @@ services:
       dockerfile: Dockerfile
     command: python manage.py runserver 0.0.0.0:8000
     ports:
-      - 5000:8000
+      - 8000:8000
     env_file:
       - ./.env.dev
     depends_on:
@@ -13,16 +13,8 @@ services:
 
   postgres:
     image: postgres:13.3
-#    volumes:
-#      - postgres_data:/var/lib/postgresql/data/
     env_file:
       - ./.env.dev
-#    environment:
-#      POSTGRES_DB: "postgres"
-#      POSTGRES_USER: "postgres"
-#      POSTGRES_PASSWORD: "postgres"
-#    ports:
-#      - "5432:5432"
 
 
 volumes:
