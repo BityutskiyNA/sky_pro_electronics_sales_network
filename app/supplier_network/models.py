@@ -20,10 +20,6 @@ class Counterparty(MPTTModel):
                             null=True,
                             related_name='children')
     email = models.CharField(verbose_name="email", max_length=255, blank=True, null=True)
-    country = models.CharField(verbose_name="country", max_length=255, blank=True, null=True)
-    city = models.CharField(verbose_name="city", max_length=255, blank=True, null=True)
-    street = models.CharField(verbose_name="street", max_length=255, blank=True, null=True)
-    house_number = models.CharField(verbose_name="house_number", max_length=255, blank=True, null=True)
     debt = models.FloatField(verbose_name="Задолженность", max_length=255)
     created = models.DateTimeField(verbose_name="Дата создания", auto_now_add=True)
 
